@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*vertical-align: center;*/
+	/*压缩页面时骰子会向下换行*/
+  	flex-wrap: wrap;
+  	/*骰子换行后，两行骰子的排列方式，若不设置center值，两行就会距离很大*/
+  	align-content: center;
+  	/*font-family: 'Open Sans', sans-serif;*/
+    /*background: linear-gradient(top, #222, #333);*/
+}
+[class$="face"] {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	padding: 5px;
+	/*object-fit: contain;*/
+	border-radius: 15px;
+	background-color: #FFDCB9;
+	box-shadow:
+    	inset 0 3px #fff, 
+    	inset 0 -3px #ADADAD,
+    	inset 3px 0 #d0d0d0, 
+    	inset -3px 0 #d0d0d0;
+}
+.item {
+	/*转换为block后才能显示宽高*/
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	border-radius: 50%;
+	background-color: #00aeae;
+	box-shadow: inset 0 1px #007979, inset 0 -1px #80FFFF;
+}
+.first-face {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.second-face {
+	display: flex;
+	/*主轴上的对齐方式，使第二个点在到右上角*/
+	justify-content: space-between;
+}
+.second-face .item:nth-of-type(2) {
+	/*使第二个点在交叉轴的底边上，即到右下角*/
+	align-self: flex-end;
+}
+.third-face {
+	display: flex;
+	/*横向（主轴）对齐方式，先确定水平位置，使三个点水平排列*/
+	justify-content: space-between;
+}
+.third-face .item:nth-of-type(2) {
+	align-self: center;
+}
+.third-face .item:nth-of-type(3) {
+	align-self: flex-end;
+}
+.fourth-face {
+	display: flex;
+	/*左上角和右上角个各有两个竖直排列的点*/
+	justify-content: space-between;
+}
+.fourth-face .column {
+	display: flex;
+	/*两个竖直的点在交叉轴（竖直方向）的排列方式*/
+	/*就要另外设置主轴的方向*/
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fifth-face {
+	display: flex;
+	justify-content: space-between;
+}
+.fifth-face .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fifth-face .column:nth-of-type(2) {
+	justify-content: center;
+	/*align-self: center;*/
+}
+.sixth-face {
+	display: flex;
+	justify-content: space-between;
+}
+.sixth-face .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

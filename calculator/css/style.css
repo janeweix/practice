@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    /*background-color:lightslategrey;*/
+}
+
+#calculator {
+    margin: 15px auto;
+    width: 330px;
+    height: 400px;
+    border: 1px solid lightgray;
+    background-color: #5F9EA0;
+    padding: 15px;
+}
+
+/*LOGO*/
+.logo {
+    height: 20px;
+    text-align: center;
+}
+
+.logo.name {
+    line-height: 30px;
+    font-weight: bold;
+
+}
+
+/*screen*/
+#input {
+    margin-top: 15px;
+}
+
+/*结果输出框*/
+.screen {
+    margin-top: 5px;
+    width: 300px;
+    height: 40px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+/*按键整体的区域*/
+#keys {
+    border: 1px solid lightgray;
+    height: 223px;
+    margin-top: 25px;
+    padding: 8px;
+}
+
+/*每个单独的按键区域*/
+#keys .buttons {
+    float: left;
+    width: 42px;
+    height: 36px;
+    text-align: center;
+    background-color: lightgray;
+    /*使按键均匀分布*/
+    margin: 0 17px 20px 0;
+}
